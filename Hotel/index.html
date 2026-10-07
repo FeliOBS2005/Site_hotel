@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Grand Prestige - Hôtel de Luxe</title>
+
+    <!-- Ajout des liens pour les differents style CSS -->
+    <link rel="stylesheet" href="./css/aos.min.css" />
+    <link rel="stylesheet" href="./css/splide.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header" data-aos="fade-down">
+      <nav class="nav-container" aria-label="Navigation principale">
+        <a href="#" class="logo playfair">Le Grand Prestige</a>
+        <ul class="nav-menu">
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="./chambre.html">Chambres</a></li>
+          <li><a href="./reservation.html">Réservation</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+        <a href="./chambre.html" class="cta-button">Réserver</a>
+        <div class="mobile-menu" aria-label="Menu mobile" tabindex="0">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main">
+      <!-- Hero Section -->
+      <section id="accueil" class="hero">
+        <div class="hero-content">
+          <h1 class="playfair" data-aos="fade-up" data-aos-delay="100">
+            Bienvenue à l’Hôtel le grand Prestige
+          </h1>
+          <p data-aos="fade-up" data-aos-delay="200">
+            Votre confort, notre priorité <br />Profitez d’un séjour inoubliable
+            dans un cadre élégant et apaisant.
+          </p>
+
+          <form
+            class="booking-form"
+            aria-label="Formulaire de réservation"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="form-group" data-aos="fade-up" data-aos-delay="500">
+              <label for="checkin">Arrivée</label>
+              <input type="date" id="checkin" name="checkin" />
+            </div>
+            <div class="form-group" data-aos="fade-up" data-aos-delay="600">
+              <label for="checkout">Départ</label>
+              <input type="date" id="checkout" name="checkout" />
+            </div>
+            <div class="form-group" data-aos="fade-up" data-aos-delay="700">
+              <label for="guests">Invités</label>
+              <select id="guests" name="guests">
+                <option value="1">1 personne</option>
+                <option value="2">2 personnes</option>
+                <option value="3">3 personnes</option>
+                <option value="4">4 personnes</option>
+              </select>
+            </div>
+            <div class="form-group" data-aos="fade-up" data-aos-delay="800">
+              <label for="rooms">Chambres</label>
+              <select id="rooms" name="rooms">
+                <option value="1">1 chambre</option>
+                <option value="2">2 chambres</option>
+                <option value="3">3 chambres</option>
+              </select>
+            </div>
+            <button
+              type="button"
+              class="book-btn btn-content"
+              data-aos="fade-up"
+              data-aos-delay="900"
+              onclick="reserverHotel()"
+            >
+              Vérifier la disponibilité
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Chambres -->
+      <section id="chambres" class="section rooms">
+        <div class="container">
+          <h2
+            class="section-title playfair"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            Nos meilleurs Chambres
+          </h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="300">
+            Chaque chambre est un sanctuaire de luxe et de confort, conçu pour
+            vous offrir une expérience inoubliable.
+          </p>
+
+          <div
+            class="splide"
+            id="rooms-slider"
+            style="display: flex; justify-content: center; align-items: center"
+            data-aos="fade-up"
+            data-aos-delay="500">
+            
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide carousel-list">
+                  <div class="carousel-items">
+                    <img
+                      id="carousel-image"
+                      src="./img/img1.jpg"
+                      alt="Chambre Confort – Spacieuse, lumineuse, parfaite pour deux"
+                    />
+                    <div class="text-space">
+                      <h2>
+                        Chambre Confort – Spacieuse, lumineuse, parfaite pour
+                        deux
+                      </h2>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Fugiat vero culpa officia nulla reprehenderit, obcaecati
+                        quaerat deleniti commodi a nemo doloribus,
+                        exercitationem qui! Ipsum quae amet quas dignissimos
+                        laudantium vel. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Fugiat vero culpa officia nulla
+                        reprehenderit, obcaecati quaerat deleniti commodi a nemo
+                        doloribus, exercitationem qui! Ipsum quae amet quas
+                        dignissimos laudantium vel.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="splide__slide carousel-list">
+
+                  <div class="carousel-items">
+                    <img
+                      id="carousel-image"
+                      src="./img/img3.jpeg"
+                      alt="Suite Prestige – Vue panoramique, bain à remous, lit King Size"
+                    />
+                    <div class="text-space">
+                      <h2>
+                        Suite Prestige – Vue panoramique, bain à remous, lit
+                        King Size
+                      </h2>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Fugiat vero culpa officia nulla reprehenderit, obcaecati
+                        quaerat deleniti commodi a nemo doloribus,
+                        exercitationem qui! Ipsum quae amet quas dignissimos
+                        laudantium vel. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Fugiat vero culpa officia nulla
+                        reprehenderit, obcaecati quaerat deleniti commodi a nemo
+                        doloribus, exercitationem qui! Ipsum quae amet quas
+                        dignissimos laudantium vel.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="splide__slide"
+                  style="display: flex; gap: 10px; padding: 12px"
+                >
+                  <div class="carousel-items">
+                    <img
+                      id="carousel-image"
+                      src="./img/img4.jpg"
+                      alt="Chambre Éco – Confort simple et abordable"
+                    />
+                    <div class="text-space">
+                      <h2>Chambre Éco – Confort simple et abordable</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Fugiat vero culpa officia nulla reprehenderit, obcaecati
+                        quaerat deleniti commodi a nemo doloribus,
+                        exercitationem qui! Ipsum quae amet quas dignissimos
+                        laudantium vel. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Fugiat vero culpa officia nulla
+                        reprehenderit, obcaecati quaerat deleniti commodi a nemo
+                        doloribus, exercitationem qui! Ipsum quae amet quas
+                        dignissimos laudantium vel.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="discover-room" data-aos="fade-up" data-aos-delay="400">
+            <button class="cta-button discover">
+              <p>Découvrir plus de chambres</p>
+              <svg viewBox="0 0 24 24" aria-hidden="true" style="height: 30px">
+                <path
+                  d="M5 12h14M13 6l6 6-6 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  fill="none"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- À propos -->
+      <section id="apropos" class="section">
+        <div class="container">
+          <div class="about">
+            <div
+              class="about-content"
+              data-aos="fade-right"
+              data-aos-delay="100"
+            >
+              <h2 class="playfair">L'Art de Vivre à la Congolaise</h2>
+              <p>
+                Depuis 1895, Le Grand Prestige incarne l'excellence de
+                l'hôtellerie Congolaise. Situé au cœur de Brazzaville, notre
+                établissement allie tradition et modernité pour offrir à nos
+                hôtes une expérience unique et mémorable.
+              </p>
+              <p>
+                Chaque détail de notre hôtel a été pensé pour créer une
+                atmosphère d'exception, où le raffinement se mêle à la chaleur
+                de l'accueil congolais. Nos équipes passionnées mettent leur
+                expertise au service de votre confort et de votre bien-être.
+              </p>
+              <p>
+                Découvrez un patrimoine architectural préservé, des chambres et
+                suites somptueuses, une gastronomie d'excellence et des services
+                personnalisés qui font de chaque séjour un moment privilégié.
+              </p>
+            </div>
+            <div class="about-image" data-aos="fade-left" data-aos-delay="300">
+              <img
+                src="./img/bg1.jpg"
+                class="main-image"
+                alt="Façade de l'hôtel Le Grand Prestige à Brazzaville"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Témoignages -->
+      <section id="temoignages" class="section">
+        <div class="container">
+          <h2
+            class="section-title playfair"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            Témoignages clients
+          </h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="400">
+            Découvrez les avis de nos hôtes qui ont vécu une expérience
+            exceptionnelle
+          </p>
+          <div
+            class="splide"
+            id="avis_client"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <div class="splide__track">
+              <ul class="splide__list">
+                <!-- Listes des avis client -->
+                <li class="splide__slide">
+                  <div>
+                    <div class="info-person">
+                      <!-- SVG avatar gris -->
+                      <svg
+                        width="48"
+                        height="48"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-label="Photo de profil générique"
+                      >
+                        <circle cx="24" cy="24" r="24" fill="#d1d5db" />
+                        <ellipse
+                          cx="24"
+                          cy="20"
+                          rx="10"
+                          ry="10"
+                          fill="#b0b4b9"
+                        />
+                        <ellipse
+                          cx="24"
+                          cy="38"
+                          rx="16"
+                          ry="8"
+                          fill="#b0b4b9"
+                        />
+                      </svg>
+                      <h3>Sophie M. – ⭐⭐⭐⭐⭐</h3>
+                    </div>
+                    <p>
+                      “Un accueil chaleureux, une chambre propre et calme. J’ai
+                      adoré le petit déjeuner servi en terrasse !”
+                    </p>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div>
+                    <div class="info-person">
+                      <svg
+                        width="48"
+                        height="48"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-label="Photo de profil générique"
+                      >
+                        <circle cx="24" cy="24" r="24" fill="#d1d5db" />
+                        <ellipse
+                          cx="24"
+                          cy="20"
+                          rx="10"
+                          ry="10"
+                          fill="#b0b4b9"
+                        />
+                        <ellipse
+                          cx="24"
+                          cy="38"
+                          rx="16"
+                          ry="8"
+                          fill="#b0b4b9"
+                        />
+                      </svg>
+                      <h3>Jean B. – ⭐⭐⭐⭐</h3>
+                    </div>
+                    <p>
+                      “Emplacement idéal en centre-ville. Personnel aimable,
+                      seul bémol : le parking est un peu étroit.”
+                    </p>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div>
+                    <div class="info-person">
+                      <svg
+                        width="48"
+                        height="48"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-label="Photo de profil générique"
+                      >
+                        <circle cx="24" cy="24" r="24" fill="#d1d5db" />
+                        <ellipse
+                          cx="24"
+                          cy="20"
+                          rx="10"
+                          ry="10"
+                          fill="#b0b4b9"
+                        />
+                        <ellipse
+                          cx="24"
+                          cy="38"
+                          rx="16"
+                          ry="8"
+                          fill="#b0b4b9"
+                        />
+                      </svg>
+                      <h3>Laura C. – ⭐⭐⭐⭐⭐</h3>
+                    </div>
+                    <p>
+                      “Tout était parfait ! Mention spéciale pour le spa et le
+                      room service rapide.”
+                    </p>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div>
+                    <div class="info-person">
+                      <svg
+                        width="48"
+                        height="48"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-label="Photo de profil générique"
+                      >
+                        <circle cx="24" cy="24" r="24" fill="#d1d5db" />
+                        <ellipse
+                          cx="24"
+                          cy="20"
+                          rx="10"
+                          ry="10"
+                          fill="#b0b4b9"
+                        />
+                        <ellipse
+                          cx="24"
+                          cy="38"
+                          rx="16"
+                          ry="8"
+                          fill="#b0b4b9"
+                        />
+                      </svg>
+                      <h3>David L. – ⭐⭐⭐⭐⭐</h3>
+                    </div>
+                    <p>
+                      “Je voyage beaucoup pour le travail, et cet hôtel reste
+                      l’un de mes préférés. Très professionnel.”
+                    </p>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div>
+                    <div class="info-person">
+                      <svg
+                        width="48"
+                        height="48"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-label="Photo de profil générique"
+                      >
+                        <circle cx="24" cy="24" r="24" fill="#d1d5db" />
+                        <ellipse
+                          cx="24"
+                          cy="20"
+                          rx="10"
+                          ry="10"
+                          fill="#b0b4b9"
+                        />
+                        <ellipse
+                          cx="24"
+                          cy="38"
+                          rx="16"
+                          ry="8"
+                          fill="#b0b4b9"
+                        />
+                      </svg>
+                      <h3>Nathalie P. – ⭐⭐⭐⭐</h3>
+                    </div>
+                    <p>
+                      “L’hôtel est magnifique et très bien décoré. J’aurais aimé
+                      un choix plus large au petit déjeuner, mais c’était
+                      délicieux.”
+                    </p>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div>
+                    <div class="info-person">
+                      <svg
+                        width="48"
+                        height="48"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-label="Photo de profil générique"
+                      >
+                        <circle cx="24" cy="24" r="24" fill="#d1d5db" />
+                        <ellipse
+                          cx="24"
+                          cy="20"
+                          rx="10"
+                          ry="10"
+                          fill="#b0b4b9"
+                        />
+                        <ellipse
+                          cx="24"
+                          cy="38"
+                          rx="16"
+                          ry="8"
+                          fill="#b0b4b9"
+                        />
+                      </svg>
+                      <h3>Marc T. – ⭐⭐⭐⭐⭐</h3>
+                    </div>
+                    <p>
+                      “Excellent rapport qualité-prix. Le personnel est vraiment
+                      aux petits soins.”
+                    </p>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div>
+                    <div class="info-person">
+                      <svg
+                        width="48"
+                        height="48"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-label="Photo de profil générique"
+                      >
+                        <circle cx="24" cy="24" r="24" fill="#d1d5db" />
+                        <ellipse
+                          cx="24"
+                          cy="20"
+                          rx="10"
+                          ry="10"
+                          fill="#b0b4b9"
+                        />
+                        <ellipse
+                          cx="24"
+                          cy="38"
+                          rx="16"
+                          ry="8"
+                          fill="#b0b4b9"
+                        />
+                      </svg>
+                      <h3>Inès R. – ⭐⭐⭐⭐⭐</h3>
+                    </div>
+                    <p>
+                      “J’ai passé un week-end romantique inoubliable. Tout était
+                      parfait : la chambre, la vue, le calme.”
+                    </p>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div>
+                    <div class="info-person">
+                      <svg
+                        width="48"
+                        height="48"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-label="Photo de profil générique"
+                      >
+                        <circle cx="24" cy="24" r="24" fill="#d1d5db" />
+                        <ellipse
+                          cx="24"
+                          cy="20"
+                          rx="10"
+                          ry="10"
+                          fill="#b0b4b9"
+                        />
+                        <ellipse
+                          cx="24"
+                          cy="38"
+                          rx="16"
+                          ry="8"
+                          fill="#b0b4b9"
+                        />
+                      </svg>
+                      <h3>Thomas D. – ⭐⭐⭐⭐</h3>
+                    </div>
+                    <p>
+                      “Confort au top, literie parfaite. Le restaurant propose
+                      de très bons plats faits maison.”
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="contact" data-aos="fade-up">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-section">
+              <h3 class="playfair" data-aos="fade-up" data-aos-delay="100">
+                Le Grand Prestige
+              </h3>
+              <p data-aos="fade-up" data-aos-delay="200">
+                L'excellence de l'hôtellerie Congolaise depuis 1895. Découvrez
+                un art de vivre unique au cœur de Brazzaville.
+              </p>
+              <div class="social-links">
+                <a
+                  href="#"
+                  aria-label="Facebook"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
+                  <!-- Facebook SVG -->
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="12" cy="12" r="12" fill="#d4af37" />
+                    <path
+                      d="M15.36 8.5H13.5V7.5C13.5 7.22 13.72 7 14 7H15V5H13.5C12.12 5 11 6.12 11 7.5V8.5H9V10.5H11V19H13.5V10.5H15L15.36 8.5Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  aria-label="Instagram"
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                >
+                  <!-- Instagram SVG -->
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="12" cy="12" r="12" fill="#d4af37" />
+                    <rect
+                      x="7"
+                      y="7"
+                      width="10"
+                      height="10"
+                      rx="3"
+                      fill="white"
+                    />
+                    <circle cx="12" cy="12" r="2.5" fill="#d4af37" />
+                    <circle cx="15.5" cy="8.5" r="0.8" fill="#d4af37" />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  aria-label="Twitter"
+                  data-aos="fade-up"
+                  data-aos-delay="600"
+                >
+                  <!-- Twitter SVG -->
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="12" cy="12" r="12" fill="#d4af37" />
+                    <path
+                      d="M18 9.24c-.42.18-.87.3-1.34.36.48-.29.85-.75 1.02-1.3-.45.27-.95.47-1.48.58a2.25 2.25 0 0 0-3.84 2.05A6.39 6.39 0 0 1 6.5 8.6a2.25 2.25 0 0 0 .7 3c-.39-.01-.76-.12-1.08-.3v.03a2.25 2.25 0 0 0 1.8 2.2c-.18.05-.37.08-.56.08-.14 0-.27-.01-.4-.04a2.25 2.25 0 0 0 2.1 1.56A4.52 4.52 0 0 1 6 16.29c-.29 0-.57-.02-.85-.05A6.37 6.37 0 0 0 9.29 17.5c7.55 0 11.68-6.26 11.68-11.68 0-.18 0-.36-.01-.54.8-.58 1.5-1.3 2.05-2.13Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  aria-label="LinkedIn"
+                  data-aos="fade-up"
+                  data-aos-delay="700"
+                >
+                  <!-- LinkedIn SVG -->
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="12" cy="12" r="12" fill="#d4af37" />
+                    <rect x="7" y="10" width="2" height="7" fill="white" />
+                    <rect x="15" y="13" width="2" height="4" fill="white" />
+                    <rect x="11" y="13" width="2" height="4" fill="white" />
+                    <circle cx="8" cy="8" r="1" fill="white" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="footer-section">
+              <h3 data-aos="fade-up" data-aos-delay="100">Contact</h3>
+              <a
+                href="tel:+242064732923"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                ><i class="fas fa-phone"></i> +242 06 473 29 23</a
+              >
+              <a
+                href="mailto:contact@legrandprestige.fr"
+                data-aos="fade-up"
+                data-aos-delay="300"
+                ><i class="fas fa-envelope"></i> contact@legrandprestige.cg</a
+              >
+              <p data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-map-marker-alt"></i> 23 bis Rue Mankoussou<br />Brazzaville,
+                Congo
+              </p>
+            </div>
+            <div class="footer-section">
+              <h3 data-aos="fade-up" data-aos-delay="100">Services</h3>
+              <a href="#" data-aos="fade-up" data-aos-delay="200"
+                >Restaurant Gastronomique</a
+              >
+              <a href="#" data-aos="fade-up" data-aos-delay="300"
+                >Spa & Bien-être</a
+              >
+              <a href="#" data-aos="fade-up" data-aos-delay="400"
+                >Conciergerie</a
+              >
+              <a href="#" data-aos="fade-up" data-aos-delay="500"
+                >Centre de Fitness</a
+              >
+              <a href="#" data-aos="fade-up" data-aos-delay="600"
+                >Salles de Réunion</a
+              >
+            </div>
+            <div class="footer-section">
+              <h3 data-aos="fade-up" data-aos-delay="100">Informations</h3>
+              <a href="#" data-aos="fade-up" data-aos-delay="200"
+                >Politique de confidentialité</a
+              >
+              <a href="#" data-aos="fade-up" data-aos-delay="300"
+                >Conditions générales</a
+              >
+              <a href="#" data-aos="fade-up" data-aos-delay="400"
+                >Mentions légales</a
+              >
+              <a href="#" data-aos="fade-up" data-aos-delay="500"
+                >Plan du site</a
+              >
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>
+              &copy; 2024 Le Grand Prestige. Tous droits réservés. | Développé
+              avec excellence
+            </p>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <!-- Scripts -->
+    <script src="./script/aos.min.js"></script>
+    <script src="./script/splide.min.js"></script>
+    <script src="./script/main.js"></script>
+
+    <!-- Initialisation de AOS -->
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
